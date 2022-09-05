@@ -51,7 +51,7 @@ for document in documents:
         bag.append(1) if word in wordPatterns else bag.append(0)
     # Copying list not typecasting
     outputRow = list(outputEmpty)
-    outputRow[classes.index(document[1])]
+    outputRow[classes.index(document[1])] = 1
     training.append([bag, outputRow])
 
 random.shuffle(training)
@@ -62,19 +62,13 @@ train_y = list(training[:, 1])
 
 # Building neural network application
 model = Sequential()
-model.add(
-    Dense(
-        128,
-        input_shape=(len(train_x[0]),),
-        activation="relu",
-    )
-)
+model.add(Dense(128, input_shape=(len(train_x[0]),), activation="relu"))
 model.add(Dropout(0.5))
 model.add(Dense(64, activation="relu"))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation="softmax"))
 
-sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy"])
 hist = model.fit(
     np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1

@@ -1,9 +1,9 @@
 {
     "intents":
     [
-        { "tag": "greetings",
-        "patterns":["hello","hey","hi","good day","greetings","what's up?","how is it going?"],
-        "responses":["Hello","Hey","What can I do for you?"]
+        {   "tag": "greetings",
+            "patterns":["hello","hey","hi","good day","greetings","what's up?","how is it going?"],
+            "responses":["Hello","Hey","What can I do for you?"]
         },
         {
             "tag":"goodbye",
@@ -12,7 +12,7 @@
         },
         {
             "tag":"age",
-            "patterns":["How old are you","when did you made","age?","what is your age"],
+            "patterns":["How old are you","when did you made","age?","what is your age","how long did you exist"],
             "responses":["My creator is 22 years old","I made in 2022"]
         },
         {
@@ -29,7 +29,7 @@
         {
             "tag":"creator",
             "patterns":["Who made you","Who is your creator?","How to reach your creator?","When are your creator online"],
-            "responses":["My creator is LordWile and you can reach him at https://github.com/EmirBaran-Ozdemir or https://www.linkedin.com/in/emir-baran-özdemir-266973230/ or https://twitter.com/WileLord at 24/7"]
+            "responses":["My creator is LordWile and you can reach him at https://github.com/EmirBaran-Ozdemir or https://www.linkedin.com/in/emir-baran-\u00f6zdemir-266973230/ or https://twitter.com/WileLord !"]
         },
         {
             "tag":"sourceCode",

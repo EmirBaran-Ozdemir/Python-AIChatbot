@@ -34,16 +34,13 @@ def bagOfWords(sentence):
 
 def predictClass(sentence):
     bow = bagOfWords(sentence)
-
     res = model.predict(np.array([bow]))[0]
     ERROR_TRESHOLD = 0.25
-    results = [[i, r] for i, r in enumerate(res)]
-
+    results = [[i, r] for i, r in enumerate(res) if r > ERROR_TRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     returnList = []
 
     for r in results:
-
         returnList.append({"intent": classes[r[0]], "probability": str(r[1])})
     return returnList
 
@@ -62,6 +59,7 @@ def getResponse(intentsList, intentsJson):
 print("Bot is running!")
 while True:
     message = input("")
+    message = message.lower()
     ints = predictClass(message)
     res = getResponse(ints, intents)
     print(res)
