@@ -1,0 +1,40 @@
+{
+    "intents":
+    [
+        { "tag": "greetings",
+        "patterns":["hello","hey","hi","good day","greetings","what's up?","how is it going?"],
+        "responses":["Hello","Hey","What can I do for you?"]
+        },
+        {
+            "tag":"goodbye",
+            "patterns":["cya","see you later","goodbye","bye","see ya"],
+            "responses":["Goodbye","See you later","I will miss you :(","Talk to you later"]
+        },
+        {
+            "tag":"age",
+            "patterns":["How old are you","when did you made","age?","what is your age"],
+            "responses":["My creator is 22 years old","I made in 2022"]
+        },
+        {
+            "tag":"name",
+            "patterns":["What is your name","what should I call you","whats your name?","who are you"],
+            "responses":["You can call me LordWile's bot","My name is LordWile's bot","I'm LordWile's bot"]
+        },
+        {
+            "tag":"products",
+            "patterns":["I want to see products","Can I check other products?","What products do you have","What projects do you have","I want to see your projects","I want to see your products","What are your products"],
+            "responses":["You can check my creator's other products at https://github.com/EmirBaran-Ozdemir. They are so interesting!"]
+
+        },
+        {
+            "tag":"creator",
+            "patterns":["Who made you","Who is your creator?","How to reach your creator?","When are your creator online"],
+            "responses":["My creator is LordWile and you can reach him at https://github.com/EmirBaran-Ozdemir or https://www.linkedin.com/in/emir-baran-özdemir-266973230/ or https://twitter.com/WileLord at 24/7"]
+        },
+        {
+            "tag":"sourceCode",
+            "patterns":["how can I reach your source code?","What language are you written?","How did you made","Can I copy you?","Can I see your source code","Can I see your code"],
+            "responses":["You can check my source code at https://github.com/EmirBaran-Ozdemir/Python-AIChatbot and I am coded in Python"]
+        }
+    ]
+}
